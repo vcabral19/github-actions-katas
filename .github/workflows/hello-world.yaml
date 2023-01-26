@@ -6,8 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps:
-      - name: Clone-down
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Upload Repo
+        uses: actions/upload-artifact@v3
         with:
           name: code
           path: .
